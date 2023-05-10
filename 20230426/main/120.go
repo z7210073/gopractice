@@ -21,7 +21,13 @@ func myfun2(fun myfunType, n1 int, n2 int) int {
 	return fun(n1, n2)
 }
 
-//通过type 自定义数据类型
+// 通过type 自定义数据类型
+// go 支持返回值命名
+func calc(n int, v int) (sum int, sub int) {
+	sum = n + v
+	sub = n - v
+	return
+}
 
 func main() {
 
@@ -37,4 +43,5 @@ func main() {
 	fmt.Println(s)
 	fmt.Println(myfun2(a, 12, 22))
 
+	fmt.Println(calc(10, 2))
 }
